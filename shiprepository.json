@@ -1,3 +1,8 @@
 [
-  {"name":"test", "width": 0.0 , "height": 0.0 , "code":"user" }
+  {
+    "Name": "test1",
+    "Length": 0.0,
+    "Width": 5.0,
+    "Code": "user1"
+  }
 ]

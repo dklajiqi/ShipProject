@@ -26,7 +26,7 @@ public class HomeController : Controller
     }
 
     
-    [HttpPost]
+    [HttpPost("create")]
     public ActionResult Create(Ship entry)
     {
         var json = LoadJson(jsonPath);
@@ -97,8 +97,8 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpDelete]
-    public ActionResult Delete(string code)
+    [Route("delete/{code}")]
+    public ActionResult Delete([FromRoute] string code)
     {
         var json = LoadJson(jsonPath);
 
@@ -120,7 +120,7 @@ public class HomeController : Controller
             WriteJson(jsonPath, jsonToOutput);
         }
 
-        return View();
+        return View("Index", ships);
     }
 
 

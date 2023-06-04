@@ -13,6 +13,9 @@
                     <th>Length</th>
                     <th>Width</th>
                     <th>Code</th>
+                    <th>
+                        <a href="#addEmployeeModal" class="add" data-toggle="modal"><i class="bi bi-plus-circle-fill"></i></a>
+                    </th>
                 </tr>
                 @foreach (var ship in Model)
                 {
@@ -20,7 +23,11 @@
                         <td>@ship.Name</td>
                         <td>@ship.Length</td> 
                         <td>@ship.Width</td> 
-                        <td>@ship.Code</td>  
+                        <td>@ship.Code</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="bi bi-pencil-square"></i></a>
+                            <a href="/delete/@ship.Code"><i class="bi bi-trash-fill"></i></a>
+                        </td>  
                     </tr>
                 }
             </table>
