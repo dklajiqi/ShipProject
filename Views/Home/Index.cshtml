@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ShipProject.Models.Ship>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row bg-dark">
+        <div class="col-sm">
+            <table class = "table table-dark" style="height:100%;">
+                <tr class = "table-row">
+                    <th>Name</th>
+                    <th>Length</th>
+                    <th>Width</th>
+                    <th>Code</th>
+                </tr>
+                @foreach (var ship in Model)
+                {
+                    <tr class = "table-row clickable-row">
+                        <td>@ship.Name</td>
+                        <td>@ship.Length</td> 
+                        <td>@ship.Width</td> 
+                        <td>@ship.Code</td>  
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

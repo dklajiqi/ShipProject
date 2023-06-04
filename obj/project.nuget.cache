@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "k69Ey2lgIIw5i1n0SVPYrvO2sDrRPcyV3jkkxw4sZSs5n4ZqdM4uUHuH4cC+YnOz6FBYmoG45LidOzAfKWCaDQ==",
+  "success": true,
+  "projectFilePath": "/home/dion/Documents/Interviews/HPC-Consulting/ShipProject/ShipProject.csproj",
+  "expectedPackageFiles": [
+    "/home/dion/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
