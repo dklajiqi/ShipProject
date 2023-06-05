@@ -1,7 +1,5 @@
-﻿@model IEnumerable<ShipProject.Models.Ship>
-
-@{
-    ViewData["Title"] = "Home Page";
+﻿@{
+    ViewData["Title"] = "Add Page";
 }
 
 <div class="container">
@@ -10,11 +8,11 @@
             <table class = "table table-dark" style="height:100%;">
                 <tr class = "table-row">
                     <th>Name</th>
-                    <th>Length</th>
-                    <th>Width</th>
+                    <th>Length(m)</th>
+                    <th>Width(m)</th>
                     <th>Code</th>
                     <th>
-                        <a href="#addEmployeeModal" class="add" data-toggle="modal"><i class="bi bi-plus-circle-fill"></i></a>
+                        <a href="/add" class="add"><i class="bi bi-plus-circle-fill"></i></a>
                     </th>
                 </tr>
                 @foreach (var ship in Model)
@@ -25,7 +23,7 @@
                         <td>@ship.Width</td> 
                         <td>@ship.Code</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="bi bi-pencil-square"></i></a>
+                            <a href="/edit/@ship.Code" class="edit"><i class="bi bi-pencil-square"></i></a>
                             <a href="/delete/@ship.Code"><i class="bi bi-trash-fill"></i></a>
                         </td>  
                     </tr>

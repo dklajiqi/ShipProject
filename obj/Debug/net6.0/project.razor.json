@@ -18389,8 +18389,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/dion/Documents/Interviews/HPC-Consulting/ShipProject/Views/Home/Add.cshtml",
+      "TargetPath": "Views\\Home\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/dion/Documents/Interviews/HPC-Consulting/ShipProject/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/dion/Documents/Interviews/HPC-Consulting/ShipProject/Views/Home/Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

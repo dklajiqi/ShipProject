@@ -45,6 +45,53 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function AddShip() {
+
+            let formData = {
+                Name: $("#ShipName").val(),
+                Width: $("#ShipWidth").val(),
+                Length: $("#ShipLength").val(),
+                Code: $("#ShipCode").val(),
+            }
+
+            console.log(formData);
+
+            $.ajax({
+                url: "/AddShip",
+                data: formData,
+                success: function(response) {
+                    window.location='/'
+                },
+                error: function(request, status, error) {
+                    alert(error);
+                }
+            });
+        }
+
+        function EditShip() {
+
+            let formData = {
+                Name: $("#ShipName").val(),
+                Width: $("#ShipWidth").val(),
+                Length: $("#ShipLength").val(),
+                Code: $("#ShipCode").val(),
+            }
+
+            console.log(formData);
+
+            $.ajax({
+                url: "/EditShip",
+                data: formData,
+                success: function(response) {
+                    window.location='/'
+                },
+                error: function(request, status, error) {
+                    alert(error);
+                }
+            });
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

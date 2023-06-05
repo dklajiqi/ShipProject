@@ -1,0 +1,39 @@
+﻿@model ShipProject.Models.Ship
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .form-label{
+  color: white;
+}
+</style>
+
+
+<div class="container">
+    <div class="row bg-dark">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="ShipName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="ShipName" aria-describedby="name" value = "@Model.Name">
+            </div>
+            <div class="form-group">
+                <label for="ShipWidth" class="form-label">Width:</label>
+                <input type="number" class="form-control" id="ShipWidth" aria-describedby="width" value = "@Model.Width">
+            </div>
+            <div class="form-group">
+                <label for="ShipLength" class="form-label">Length:</label>
+                <input type="number" class="form-control" step="0.01" id="ShipLength" aria-describedby="length" value = "@Model.Length">
+            </div>
+            <div class="form-group">
+                <label for="ShipCode" class="form-label">Code:</label>
+                <input type="text" class="form-control" step="0.01" id="ShipCode" aria-describedby="code" value = "@Model.Code">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary" onclick="EditShip()">Edit</button>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,40 @@
+﻿@model ShipProject.Models.Ship
+
+@{
+    ViewData["Title"] = "Add Page";
+}
+
+<style>
+    .form-label{
+  color: white;
+}
+</style>
+
+<div class="container">
+    <div class="row bg-dark">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="ShipName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="ShipName" aria-describedby="name">
+            </div>
+            <div class="form-group">
+                <label for="ShipWidth" class="form-label">Width:</label>
+                <input type="number" step="0.01" class="form-control" id="ShipWidth" aria-describedby="width">
+            </div>
+            <div class="form-group">
+                <label for="ShipLength" class="form-label">Length:</label>
+                <input type="number" step="0.01" class="form-control" id="ShipLength" aria-describedby="length">
+            </div>
+            <div class="form-group">
+                <label for="ShipCode" class="form-label">Code:</label>
+                <input type="text" class="form-control" id="ShipCode" aria-describedby="code">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary " onclick="AddShip()">Add</button>
+            
+        </div>
+    </div>
+</div>
+
+
+
