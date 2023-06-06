@@ -1,8 +1,11 @@
 # ShipProject
 
-## Run Locally
-### To run locally the repository you need to install dotnet 6
+A basic CRUD based on ASP.NEZ
 
-### To start the project use the command "dotnet run ShipProject"
+## Prerequisites
+* [asp.net](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-6.0?view=aspnetcore-7.0) (ASP.NET 6)
 
-## For Docker support:
+## Run Project
+```bash
+dotnet run ShipProject
+```
