@@ -59,9 +59,6 @@ public class HomeController : Controller
     [Route("AddShip")]
     public IActionResult AddShip(Ship ship)
     {
-        var guid = Guid.NewGuid();
-
-        Console.WriteLine("Guid:" + guid);
 
         if (ship != null)
         {
@@ -96,7 +93,7 @@ public class HomeController : Controller
 
     
     [Route("EditShip")]
-    public ActionResult Update(string code, Ship entry)
+    public ActionResult Update(Ship entry)
     {
         
         var json = LoadJson(jsonPath);
@@ -105,18 +102,10 @@ public class HomeController : Controller
 
         if(ships != null)
         {
-            var regex = @"^[A-Za-z]{4}-\d{4}-[A-Za-z]\d$";
-
-            var match = Regex.Match(entry.Code, regex, RegexOptions.IgnoreCase);
-
-            if (!match.Success)
-            {
-                return NotFound();
-            }
 
             foreach(var ship in ships)
             {
-                if(ship.Code == code)
+                if(ship.Code == entry.Code)
                 {
                     ship.Code = entry.Code;
                     ship.Name = entry.Name;
@@ -126,12 +115,13 @@ public class HomeController : Controller
                 }
                 
             }
+
             var jsonToOutput = JsonConvert.SerializeObject(ships, Formatting.Indented);
 
             WriteJson(jsonPath, jsonToOutput);
         }
 
-        return View();
+        return View("Index", ships);
     }
     
 
